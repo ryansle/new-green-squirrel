@@ -1,10 +1,17 @@
 // Components
 import { Layout } from '@/components/navigation';
+import { Hero } from '@/components/home';
+import { Divider } from '@/components/global';
 
-const HomePage = () => {
+// Types
+import type { NextPage } from 'next';
+
+const HomePage: NextPage = () => {
   return (
     <Layout>
-      test
+      <Hero />
+      <Divider />
+
     </Layout>
   );
 };

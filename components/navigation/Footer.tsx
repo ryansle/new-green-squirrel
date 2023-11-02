@@ -1,6 +1,6 @@
 // Components
 import NextLink from 'next/link';
-import { FaInstagram as Instagram, FaBong as Bong } from 'react-icons/fa6';
+import { FaBong as Bong } from 'react-icons/fa6';
 import { GiSquirrel as Squirrel, GiChestnutLeaf as Leaf } from 'react-icons/gi';
 
 const Footer = () => {
@@ -11,15 +11,6 @@ const Footer = () => {
     { url: 'https://www.instagram.com/thegreenspeakeasy/', text: 'The Green Speakeasy', icon: <Leaf className={iconStyle} /> },
     { url: 'https://www.instagram.com/theglassshopbk/', text: 'The Glass Shop', icon: <Bong className={iconStyle} /> }
   ];
-
-  const renderIcon = (platform: string) => {
-    switch (platform) {
-      case 'Instagram':
-        return <Instagram className={iconStyle} />;
-      default:
-        return;
-    }
-  };
 
   return (
     <footer className='border-t border-gray-700 px-6 h-20 mt-24 xs:px-20 lg:px-48 2xl:px-72 3xl:px-[400px] 4xl:px-[500px]'>
