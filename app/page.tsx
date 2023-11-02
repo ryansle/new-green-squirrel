@@ -1,6 +1,6 @@
 // Components
 import { Layout } from '@/components/navigation';
-import { Hero } from '@/components/home';
+import { Hero, Policies } from '@/components/home';
 import { Divider } from '@/components/global';
 
 // Types
@@ -10,8 +10,9 @@ const HomePage: NextPage = () => {
   return (
     <Layout>
       <Hero />
+      {/* TODO: product scroller */}
       <Divider />
-
+      <Policies />
     </Layout>
   );
 };
