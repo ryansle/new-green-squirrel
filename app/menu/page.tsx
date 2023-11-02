@@ -1,12 +1,15 @@
 // Components
 import { Layout } from '@/components/navigation';
 
-const HomePage = () => {
+// Types
+import type { NextPage } from 'next';
+
+const MenuPage: NextPage = () => {
   return (
     <Layout>
-      test
+
     </Layout>
   );
 };
 
-export default HomePage;
+export default MenuPage;
