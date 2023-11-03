@@ -6,7 +6,12 @@ import { Divider } from '@/components/global';
 // Types
 import type { NextPage } from 'next';
 
-const HomePage: NextPage = () => {
+// Utilities
+import { fetchBatteries } from '@/sanity/fetch';
+
+const HomePage: NextPage = async () => {
+  const batteries = await fetchBatteries();
+
   return (
     <Layout>
       <Hero />
