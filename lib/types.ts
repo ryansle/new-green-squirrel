@@ -53,9 +53,19 @@ type Route = {
   href: string;
   icon: ReactNode;
 }
+
 type SocialMedia = {
   url: string;
   platform: string;
+}
+
+type Policy = {
+  policy: string;
+}
+
+type FAQ = {
+  question: string;
+  answer: string;
 }
 // #endregion
 
@@ -63,4 +73,6 @@ export type {
   ContentfulImage,
   Route,
   SocialMedia,
+  Policy,
+  FAQ
 };

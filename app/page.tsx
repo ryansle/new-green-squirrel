@@ -7,17 +7,17 @@ import { Divider } from '@/components/global';
 import type { NextPage } from 'next';
 
 // Utilities
-import { fetchBatteries } from '@/sanity/fetch';
+import { fetchPolicies } from '@/sanity/fetch';
 
 const HomePage: NextPage = async () => {
-  const batteries = await fetchBatteries();
+  const policies = await fetchPolicies();
 
   return (
     <Layout>
       <Hero />
       {/* TODO: product scroller */}
       <Divider />
-      <Policies />
+      <Policies policies={policies} />
     </Layout>
   );
 };
