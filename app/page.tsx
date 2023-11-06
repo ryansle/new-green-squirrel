@@ -1,6 +1,6 @@
 // Components
 import { Layout } from '@/components/navigation';
-import { Hero, Policies } from '@/components/home';
+import { Hero, Policies, Gallery } from '@/components/home';
 import { Divider } from '@/components/global';
 
 // Types
@@ -15,7 +15,7 @@ const HomePage: NextPage = async () => {
   return (
     <Layout>
       <Hero />
-      {/* TODO: product scroller */}
+      <Gallery />
       <Divider />
       <Policies policies={policies} />
     </Layout>

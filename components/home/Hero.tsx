@@ -21,7 +21,7 @@ const Hero = () => {
         </h1>
       </div>
 
-      <div className='text-gray-500 text-lg text-center mt-12'>
+      <div className='text-gray-500 text-lg text-center mt-8'>
         <p>
           We love to give you free shit and we only carry what we smoke!
         </p>
