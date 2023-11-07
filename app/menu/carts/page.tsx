@@ -20,8 +20,6 @@ const routes = [
 const CartsPage: NextPage = async () => {
   const carts = await fetchCarts();
 
-  console.log(carts);
-
   return (
     <Layout>
       <Breadcrumbs routes={routes} />

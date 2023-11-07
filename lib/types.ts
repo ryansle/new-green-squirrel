@@ -24,47 +24,61 @@ type FAQ = {
 // #endregion
 
 // #region Menu
-type Flower = {
-  strain: string;
-  thcContent: string;
-  cbdContent: string;
-  description: string;
-  jarType: 'clear' | 'black' | 'green';
-  type: 'sativa' | 'indica' | 'hybrid';
-  imageUrl: string;
-  quantity: string;
-  visible: boolean;
-  ourPick: boolean;
+type Product = {
   almostGone: boolean;
-  price: string;
   new: boolean;
-  smallGiftEligible: boolean;
-  mediumGiftEligible: boolean;
-  standardGiftEligible: boolean;
-  premiumGiftEligible: boolean;
-  squirrelReserveElig: boolean;
-  referralGiftEligible: boolean | null;
-}
-
-type Cartridge = {
-  visible: boolean;
-  thcContent: string;
-  price: string;
-  brand: string;
-  types: string[];
-  imageUrl: string;
-  quantity: string;
-  description: string;
-  new: boolean;
-  almostGone: boolean;
   ourPick: boolean;
+  visible: boolean;
   smallGiftEligible: boolean;
   squirrelReserveEligible: boolean;
   standardGiftEligible: boolean;
   referralGiftEligible: boolean;
   mediumGiftEligible: boolean;
   premiumGiftEligible: boolean;
+  price: string;
+  imageUrl: string;
+  description: string;
+}
 
+type Flower = Product & {
+  strain: string;
+  thcContent: string;
+  cbdContent: string;
+  jarType: 'clear' | 'black' | 'green';
+  type: 'sativa' | 'indica' | 'hybrid';
+  quantity: string;
+}
+
+type Cartridge = Product & {
+  thcContent: string;
+  brand: string;
+  types: string[];
+  quantity: string;
+}
+
+type Battery = Product & {
+  brand: string;
+  name: string;
+}
+
+type Edible = Product & {
+  thcContent: string;
+  brand: string;
+  name: string;
+}
+
+type Preroll = Product & {
+  name: string;
+}
+
+type Concentrate = Product & {
+  quantity: string;
+  name: string;
+}
+
+type Special = Product & {
+  quantity: string;
+  name: string;
 }
 // #endregion
 
@@ -74,5 +88,10 @@ export type {
   Policy,
   FAQ,
   Flower,
-  Cartridge
+  Cartridge,
+  Battery,
+  Edible,
+  Preroll,
+  Concentrate,
+  Special,
 };
