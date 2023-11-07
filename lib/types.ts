@@ -44,6 +44,26 @@ type Flower = {
   premiumGiftEligible: boolean;
   squirrelReserveElig: boolean;
   referralGiftEligible: boolean | null;
+}
+
+type Cartridge = {
+  visible: boolean;
+  thcContent: string;
+  price: string;
+  brand: string;
+  types: string[];
+  imageUrl: string;
+  quantity: string;
+  description: string;
+  new: boolean;
+  almostGone: boolean;
+  ourPick: boolean;
+  smallGiftEligible: boolean;
+  squirrelReserveEligible: boolean;
+  standardGiftEligible: boolean;
+  referralGiftEligible: boolean;
+  mediumGiftEligible: boolean;
+  premiumGiftEligible: boolean;
 
 }
 // #endregion
@@ -53,5 +73,6 @@ export type {
   SocialMedia,
   Policy,
   FAQ,
-  Flower
+  Flower,
+  Cartridge
 };
