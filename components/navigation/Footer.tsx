@@ -79,7 +79,7 @@ const Footer = () => {
         <hr className='my-6 border-gray-200 sm:mx-auto border-gray-700 lg:my-8' />
         <div className='sm:flex sm:items-center sm:justify-between'>
           <span className='text-sm text-gray-600 sm:text-center'>
-            © {new Date().getFullYear()} Green Squirrel Collective. All Rights Reserved.
+            © {new Date().getFullYear()} Green Squirrel Collective. All Rights Reserved. Website designed and developed by <NextLink href='https://ryanle.dev/' className='font-bold underline hover:text-white'>Ryan Le</NextLink>.
           </span>
         </div>
       </div>
