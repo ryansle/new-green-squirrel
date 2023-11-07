@@ -12,7 +12,7 @@ const Gallery = () => {
   return (
     <div>
       <h2 className='text-center mt-4 font-semibold text-2xl'>
-        Carrying Only the Finest
+        Carrying Only the Finest...
       </h2>
       <div className='flex mt-2'>
         <Swiper

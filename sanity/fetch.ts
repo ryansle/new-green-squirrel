@@ -3,7 +3,7 @@ import { client } from '@/sanity/lib/client';
 
 // #region Inventory Fetch Requests
 const fetchFlowers = async () => {
-  const data = await client.fetch(`*[_type == 'flowers'] {
+  const data = await client.fetch(`*[_type == 'flowers' && visible] {
     strain,
     type,
     thcContent,
@@ -29,7 +29,7 @@ const fetchFlowers = async () => {
 };
 
 const fetchBatteries = async () => {
-  const data = await client.fetch(`*[_type == 'batteries'] {
+  const data = await client.fetch(`*[_type == 'batteries' && visible] {
     brand,
     description,
     'imageUrl': image.asset->url,
@@ -50,7 +50,7 @@ const fetchBatteries = async () => {
 };
 
 const fetchCarts = async () => {
-  const data = await client.fetch(`*[_type == 'cartridges'] {
+  const data = await client.fetch(`*[_type == 'cartridges' && visible] {
     brand,
     types,
     thcContent,
@@ -74,7 +74,7 @@ const fetchCarts = async () => {
 };
 
 const fetchConcentrates = async () => {
-  const data = await client.fetch(`*[_type == 'concentrates'] {
+  const data = await client.fetch(`*[_type == 'concentrates' && visible] {
     name,
     description,
     'imageUrl': image.asset->url,
@@ -96,7 +96,7 @@ const fetchConcentrates = async () => {
 };
 
 const fetchEdibles = async () => {
-  const data = await client.fetch(`*[_type == 'edibles'] {
+  const data = await client.fetch(`*[_type == 'edibles' && visible] {
     brand,
     name,
     description,
@@ -119,7 +119,7 @@ const fetchEdibles = async () => {
 };
 
 const fetchPrerolls = async () => {
-  const data = await client.fetch(`*[_type == 'prerolls'] {
+  const data = await client.fetch(`*[_type == 'prerolls' && visible] {
     name,
     description,
     'imageUrl': image.asset->url,
@@ -140,7 +140,7 @@ const fetchPrerolls = async () => {
 };
 
 const fetchSpecials = async () => {
-  const data = await client.fetch(`*[_type == 'specialRequest'] {
+  const data = await client.fetch(`*[_type == 'specialRequest' && visible] {
     name,
     description,
     'imageUrl': image.asset->url,
@@ -217,7 +217,7 @@ const fetchOffers = async () => {
 };
 
 const fetchFlowerGifts = async () => {
-  const data = await client.fetch(`*[_type == 'flowergifts'] {
+  const data = await client.fetch(`*[_type == 'flowergifts && visible] {
     strain,
     type,
     thcContent,

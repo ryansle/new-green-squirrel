@@ -12,9 +12,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'downloads.ctfassets.net',
         port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        port: '',
       }
     ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

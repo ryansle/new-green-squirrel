@@ -1,52 +1,6 @@
 // Built-in Types
 import type { ReactNode } from 'react';
 
-// #region Contentful Types
-type ContentfulSys = {
-  id: string;
-  type: string;
-  linkType: string;
-}
-
-type ContentfulFile = {
-  contentType: string;
-  details: {
-    image: {
-      height: number;
-      width: number;
-    }
-    size: number;
-  }
-  fileName: string;
-  url: string;
-}
-
-type ContentfulImage = {
-  fields: {
-    title: string;
-    description: string;
-    file: ContentfulFile;
-  }
-  metaData: {
-    tags: string[]
-  }
-  sys: {
-    createdAt: string;
-    environment: {
-      sys: ContentfulSys;
-    }
-  }
-  id: string;
-  locale: string;
-  revision: number;
-  space: {
-    sys: ContentfulSys;
-    type: string;
-    updatedAt: string;
-  }
-}
-// #endregion
-
 // #region Custom Types
 type Route = {
   text: string;
@@ -69,10 +23,35 @@ type FAQ = {
 }
 // #endregion
 
+// #region Menu
+type Flower = {
+  strain: string;
+  thcContent: string;
+  cbdContent: string;
+  description: string;
+  jarType: 'clear' | 'black' | 'green';
+  type: 'sativa' | 'indica' | 'hybrid';
+  imageUrl: string;
+  quantity: string;
+  visible: boolean;
+  ourPick: boolean;
+  almostGone: boolean;
+  price: string;
+  new: boolean;
+  smallGiftEligible: boolean;
+  mediumGiftEligible: boolean;
+  standardGiftEligible: boolean;
+  premiumGiftEligible: boolean;
+  squirrelReserveElig: boolean;
+  referralGiftEligible: boolean | null;
+
+}
+// #endregion
+
 export type {
-  ContentfulImage,
   Route,
   SocialMedia,
   Policy,
-  FAQ
+  FAQ,
+  Flower
 };
