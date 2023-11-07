@@ -20,8 +20,6 @@ const routes = [
 const BatteriesPage: NextPage = async () => {
   const batteries = await fetchBatteries();
 
-  console.log(batteries);
-
   return (
     <Layout>
       <Breadcrumbs routes={routes} />

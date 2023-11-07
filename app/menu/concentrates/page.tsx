@@ -20,8 +20,6 @@ const routes = [
 const ConcentratesPage: NextPage = async () => {
   const concentrates = await fetchConcentrates();
 
-  console.log(concentrates);
-
   return (
     <Layout>
       <Breadcrumbs routes={routes} />

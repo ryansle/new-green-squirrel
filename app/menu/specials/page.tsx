@@ -20,8 +20,6 @@ const routes = [
 const SpecialtyPage: NextPage = async () => {
   const specialties = await fetchSpecials();
 
-  console.log(specialties);
-
   return (
     <Layout>
       <Breadcrumbs routes={routes} />

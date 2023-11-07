@@ -20,8 +20,6 @@ const routes = [
 const EdiblesPage: NextPage = async () => {
   const edibles = await fetchEdibles();
 
-  console.log(edibles);
-
   return (
     <Layout>
       <Breadcrumbs routes={routes} />

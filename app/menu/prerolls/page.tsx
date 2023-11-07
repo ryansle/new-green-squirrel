@@ -20,8 +20,6 @@ const routes = [
 const PrerollsPage: NextPage = async () => {
   const prerolls = await fetchPrerolls();
 
-  console.log(prerolls);
-
   return (
     <Layout>
       <Breadcrumbs routes={routes} />
