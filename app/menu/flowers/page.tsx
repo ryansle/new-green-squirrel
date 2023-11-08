@@ -21,6 +21,11 @@ const tabs = ['Everything', 'New Arrivals', 'Almost Gone', 'Top Picks', 'Sativas
 const FlowersPage = async () => {
   const flowers = await fetchFlowers();
 
+  const newArrivals = flowers.filter((flower: FlowerType) => flower.new);
+  const almostGone = flowers.filter((flower: FlowerType) => flower.almostGone);
+
+  const groupings = [flowers, newArrivals, almostGone];
+
   return (
     <Layout>
       <Breadcrumbs routes={routes} />
@@ -32,15 +37,7 @@ const FlowersPage = async () => {
         <span className='font-bold'>NOTE</span>: You can special order any quantity of ANY flower. You aren&apos;t limited to buying these in the jar increments! If you&apos;re looking to buy an ounce of anything, message us on Signal and we&apos;ll have it special ordered with you at least a day in advance!
       </p>
 
-      <Tabs tabs={tabs} />
-
-      <div className='grid grid-cols-12 gap-4'>
-        {flowers.map((flower: FlowerType) => (
-          <div key={flower.strain} className='col-span-12 sm:col-span-6 xl:col-span-4'>
-            <Flower flower={flower} />
-          </div>
-        ))}
-      </div>
+      <Tabs tabs={tabs} flowers={flowers} />
     </Layout>
   );
 };

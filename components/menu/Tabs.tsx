@@ -4,34 +4,51 @@ import { useState } from 'react';
 
 // Components
 import { Tab } from '@headlessui/react';
+import { Flower } from './items';
+
+// Types
+import type { Flower as FlowerType } from '@/lib/types';
 
 type TabsProps = {
   tabs: string[];
+  flowers: FlowerType[];
 };
 
 const Tabs = (props: TabsProps) => {
-  const { tabs } = props;
+  const { tabs, flowers } = props;
 
-  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const [selected, setSelected] = useState<string>('Everything');
+
+  const newArrivals = flowers.filter((flower: FlowerType) => flower.new);
+  const almostGone = flowers.filter((flower: FlowerType) => flower.almostGone);
 
   return (
-    <Tab.Group
-      // @ts-ignore
-      className='flex justify-center mb-10 font-medium text-lg'
-      selectedIndex={selectedIndex}
-      onChange={setSelectedIndex}
-    >
-      <Tab.List className='border-b border-gray-700'>
-        {tabs.map((tab, index) => (
-          <Tab
+    <div>
+      <div className='flex mb-4'>
+        {tabs.map((tab) => (
+          <button
             key={tab}
-            className={`${index === selectedIndex ? 'bg-green-500 text-green-900 border-x border-t border-gray-700' : ''} px-8 py-2 rounded-t-xl`}
+            onClick={() => setSelected(tab)}
+            className='px-4'
           >
             {tab}
-          </Tab>
+          </button>
         ))}
-      </Tab.List>
-    </Tab.Group>
+      </div>
+      <div className='grid grid-cols-12 gap-4'>
+        {selected === 'Everything' && flowers.map((flower: FlowerType) => (
+          <div key={flower.strain} className='col-span-12 sm:col-span-6 xl:col-span-4'>
+            <Flower flower={flower} />
+          </div>
+        ))}
+
+        {selected === 'New Arrivals' && newArrivals.map((flower: FlowerType) => (
+          <div key={flower.strain} className='col-span-12 sm:col-span-6 xl:col-span-4'>
+            <Flower flower={flower} />
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
