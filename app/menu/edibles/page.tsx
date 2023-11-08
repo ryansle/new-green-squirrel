@@ -4,6 +4,7 @@ import { Breadcrumbs } from '@/components/menu/Breadcrumbs';
 import { MdOutlineStorefront as Store } from 'react-icons/md';
 import { LiaCookieBiteSolid as Cookie } from 'react-icons/lia';
 import { Edible } from '@/components/menu/items';
+import { Inventory } from '@/components/menu';
 
 // Types
 import type { Edible as EdibleType } from '@/lib/types';
@@ -23,16 +24,21 @@ const EdiblesPage = async () => {
     <Layout>
       <Breadcrumbs routes={routes} />
       <h1 className='text-4xl font-semibold mb-10'>
-        Edibles
+        Edibles ({edibles.length})
       </h1>
 
-      <div className='grid grid-cols-12 gap-4'>
+      <Inventory
+        inventory={edibles}
+        category='edibles'
+      />
+
+      {/* <div className='grid grid-cols-12 gap-4'>
         {edibles.map((edible: EdibleType) => (
           <div key={edible.brand} className='col-span-12 sm:col-span-6 xl:col-span-4'>
             <Edible edible={edible} />
           </div>
         ))}
-      </div>
+      </div> */}
     </Layout>
   );
 };

@@ -13,6 +13,7 @@ type TabsProps = {
   flowers: FlowerType[];
 };
 
+// TODO: suspense component to load this after successful data load?
 const Tabs = (props: TabsProps) => {
   const { tabs, flowers } = props;
 
@@ -89,7 +90,7 @@ const Tabs = (props: TabsProps) => {
         <h3 className='text-2xl font-medium mb-4'>
           {selectedTab} ({selected.length})
         </h3>
-        <p className='mb-6'>
+        <p className='mb-6 text-gray-400'>
           {renderDescription(selectedTab)}
         </p>
 

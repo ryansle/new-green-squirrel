@@ -80,6 +80,8 @@ type Special = Product & {
   quantity: string;
   name: string;
 }
+
+type Category = 'flowers' | 'cartridges' | 'batteries' | 'edibles' | 'prerolls' | 'concentrates' | 'specialty items';
 // #endregion
 
 export type {
@@ -94,4 +96,5 @@ export type {
   Preroll,
   Concentrate,
   Special,
+  Category,
 };

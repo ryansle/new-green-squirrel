@@ -23,7 +23,7 @@ const PrerollsPage = async () => {
     <Layout>
       <Breadcrumbs routes={routes} />
       <h1 className='text-4xl font-semibold mb-10'>
-        Prerolls
+        Prerolls ({prerolls.length})
       </h1>
 
       <div className='grid grid-cols-12 gap-4'>

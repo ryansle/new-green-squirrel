@@ -24,7 +24,7 @@ const FlowersPage = async () => {
         Flowers
       </h1>
 
-      <p className='mb-6'>
+      <p className='mb-6 text-gray-400'>
         <span className='font-bold'>NOTE</span>: You can special order any quantity of ANY flower. You aren&apos;t limited to buying these in the jar increments! If you&apos;re looking to buy an ounce of anything, message us on Signal and we&apos;ll have it special ordered with you at least a day in advance!
       </p>
 
