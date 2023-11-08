@@ -17,7 +17,7 @@ const Tabs = (props: TabsProps) => {
   const { tabs, flowers } = props;
 
   const [selected, setSelected] = useState<FlowerType[]>(flowers);
-  const [selectedTab, setSelectedTab] = useState<string>('Everything');
+  const [selectedTab, setSelectedTab] = useState<string>('All Flowers');
 
   const newArrivals = flowers.filter((flower: FlowerType) => flower.new);
   const almostGone = flowers.filter((flower: FlowerType) => flower.almostGone);
@@ -29,7 +29,7 @@ const Tabs = (props: TabsProps) => {
   const handleSelection = (tab: string) => {
     setSelectedTab(tab);
     switch (tab) {
-      case 'Everything':
+      case 'All Flowers':
         setSelected(flowers);
         break;
       case 'New Arrivals':
@@ -53,10 +53,29 @@ const Tabs = (props: TabsProps) => {
     };
   };
 
+  const renderDescription = (variant: string) => {
+    switch (variant) {
+      case 'All Flowers':
+        return 'Our entire inventory of the best flowers on the market.';
+      case 'New Arrivals':
+        return 'New to the Green Squirrel!';
+      case 'Almost Gone':
+        return 'Flowers that are about to leave our current rotation. They may or may not be back.';
+      case 'Top Picks':
+        return 'Some of our personal favorites here at the Green Squirrel!';
+      case 'Sativas':
+        return 'For when you want to get shit done - or reduce your stress and anxiety';
+      case 'Indicas':
+        return 'For when you want to relax.';
+      case 'Hybrids':
+        return 'For when you want the best of both worlds.';
+    }
+  };
+
   return (
     <div>
-      <div className='flex mb-4 items-center justify-center border-b border-gray-700 mb-8 text-lg'>
-        {tabs.map((tab) => (
+      <div className='flex mb-4 items-center justify-center border-b border-gray-700 mb-6 text-lg'>
+        {tabs?.map((tab) => (
           <button
             key={tab}
             onClick={() => handleSelection(tab)}
@@ -66,12 +85,21 @@ const Tabs = (props: TabsProps) => {
           </button>
         ))}
       </div>
-      <div className='grid grid-cols-12 gap-4'>
-        {selected.map((flower: FlowerType) => (
-          <div key={flower.strain} className='col-span-12 sm:col-span-6 xl:col-span-4'>
-            <Flower flower={flower} />
-          </div>
-        ))}
+      <div>
+        <h3 className='text-2xl font-medium mb-4'>
+          {selectedTab} ({selected.length})
+        </h3>
+        <p className='mb-6'>
+          {renderDescription(selectedTab)}
+        </p>
+
+        <div className='grid grid-cols-12 gap-4'>
+          {selected?.map((flower: FlowerType) => (
+            <div key={flower.strain} className='col-span-12 sm:col-span-6 xl:col-span-4'>
+              <Flower flower={flower} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

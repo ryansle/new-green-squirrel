@@ -12,7 +12,7 @@ const routes = [
   { href: '/menu/flowers', text: 'Flowers', icon: <Leaf /> }
 ];
 
-const tabs = ['Everything', 'New Arrivals', 'Almost Gone', 'Top Picks', 'Sativas', 'Indicas', 'Hybrids'];
+const tabs = ['All Flowers', 'New Arrivals', 'Almost Gone', 'Top Picks', 'Sativas', 'Indicas', 'Hybrids'];
 
 const FlowersPage = async () => {
   const flowers = await fetchFlowers();
