@@ -31,7 +31,7 @@ const HeaderLinks = (props: HeaderLinksProps) => {
 
   return (
     <div className='space-x-4 flex items-center'>
-      <div className='hidden xl:block space-x-4 flex items-center'>
+      <div className='hidden space-x-4 flex items-center xl:block'>
         {routes.map((route: Route) => (
           <button
             className={renderStyles(path, route.href)}

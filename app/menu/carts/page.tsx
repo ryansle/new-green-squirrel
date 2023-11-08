@@ -29,7 +29,7 @@ const CartsPage: NextPage = async () => {
 
       <div className='grid grid-cols-12 gap-4'>
         {carts.map((cart: Cartridge) => (
-          <div key={cart.brand} className='col-span-4'>
+          <div key={cart.brand} className='col-span-12 sm:col-span-6 xl:col-span-4'>
             <Cart cart={cart} />
           </div>
         ))}

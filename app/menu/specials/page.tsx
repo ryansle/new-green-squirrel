@@ -29,7 +29,7 @@ const SpecialtyPage: NextPage = async () => {
 
       <div className='grid grid-cols-12 gap-4'>
         {specialties.map((special: Special) => (
-          <div key={special.name} className='col-span-4'>
+          <div key={special.name} className='col-span-12 sm:col-span-6 xl:col-span-4'>
             <Specialty special={special} />
           </div>
         ))}

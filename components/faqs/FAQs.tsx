@@ -33,15 +33,15 @@ const FAQs = (props: FAQsProps) => {
 
       <Divider margins='md' />
       {faqs?.map((pair: FAQ) => (
-        <div key={pair.question} className='w-full'>
+        <div key={pair.question} className='w-full text-left'>
           <Disclosure>
             {({ open }) => (
               <>
                 <Disclosure.Button className='flex items-center justify-between w-full pr-10'>
-                  <h2 className='font-semibold text-xl'>
+                  <h2 className='font-semibold text-xl text-left'>
                     {pair.question}
                   </h2>
-                  <ChevronDown className={open ? '-rotate-180 transform duration-500 ease-in-out' : ''} />
+                  <ChevronDown className={`${open ? '-rotate-180 transform duration-500 ease-in-out' : ''} ml-4 flex-shrink-0`} />
                 </Disclosure.Button>
 
                 <Transition

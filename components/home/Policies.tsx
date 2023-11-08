@@ -20,7 +20,7 @@ const Policies = (props: PoliciesProps) => {
         How does it work?
       </h1>
 
-      <ul className='space-y-2 text-gray-500 list-inside'>
+      <ul className='space-y-2 text-gray-500 list-inside text-md md:text-lg'>
         {policies?.map((policy) => (
           <li key={policy.policy} className='flex'>
             <Leaf className='fill-green-500 w-4 h-4 flex-shrink-0 mt-1' />

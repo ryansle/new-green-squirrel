@@ -29,7 +29,7 @@ const BatteriesPage: NextPage = async () => {
 
       <div className='grid grid-cols-12 gap-4'>
         {batteries.map((battery: BatteryType) => (
-          <div key={battery.brand} className='col-span-4'>
+          <div key={battery.brand} className='col-span-12 sm:col-span-6 xl:col-span-4'>
             <Battery battery={battery} />
           </div>
         ))}

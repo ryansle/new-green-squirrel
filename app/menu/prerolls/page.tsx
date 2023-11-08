@@ -29,7 +29,7 @@ const PrerollsPage: NextPage = async () => {
 
       <div className='grid grid-cols-12 gap-4'>
         {prerolls.map((preroll: PrerollType) => (
-          <div key={preroll.name} className='col-span-4'>
+          <div key={preroll.name} className='col-span-12 sm:col-span-6 xl:col-span-4'>
             <Preroll preroll={preroll} />
           </div>
         ))}

@@ -29,7 +29,7 @@ const EdiblesPage: NextPage = async () => {
 
       <div className='grid grid-cols-12 gap-4'>
         {edibles.map((edible: EdibleType) => (
-          <div key={edible.brand} className='col-span-4'>
+          <div key={edible.brand} className='col-span-12 sm:col-span-6 xl:col-span-4'>
             <Edible edible={edible} />
           </div>
         ))}

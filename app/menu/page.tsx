@@ -56,7 +56,7 @@ const MenuPage: NextPage = () => {
       </h1>
       <div className='grid grid-cols-12 gap-4'>
         {routes.map((route) => (
-          <div className='col-span-3' key={route.title}>
+          <div className='col-span-6 md:col-span-3' key={route.title}>
             <MenuCard
               imageUrl={route.imageUrl}
               href={route.href}

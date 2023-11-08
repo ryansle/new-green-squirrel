@@ -28,7 +28,7 @@ const Header = () => {
           src='/squirrel.png'
           alt='Green Squirrel Collective'
         />
-        <h4 className='tracking-wider font-medium text-xl'>Green Squirrel Collective</h4>
+        <h4 className='tracking-wider font-medium text-lg md:text-xl'>Green Squirrel Collective</h4>
       </NextLink>
 
       <HeaderLinks routes={routes} />

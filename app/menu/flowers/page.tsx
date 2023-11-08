@@ -6,7 +6,6 @@ import { GiChestnutLeaf as Leaf } from 'react-icons/gi';
 import { MdOutlineStorefront as Store } from 'react-icons/md';
 
 // Types
-import type { NextPage } from 'next';
 import type { Flower as FlowerType } from '@/lib/types';
 
 // Utilities
@@ -19,7 +18,7 @@ const routes = [
 
 const tabs = ['Everything', 'New Arrivals', 'Almost Gone', 'Top Picks', 'Sativas', 'Indicas', 'Hybrids'];
 
-const FlowersPage: NextPage = async () => {
+const FlowersPage = async () => {
   const flowers = await fetchFlowers();
 
   return (
@@ -37,7 +36,7 @@ const FlowersPage: NextPage = async () => {
 
       <div className='grid grid-cols-12 gap-4'>
         {flowers.map((flower: FlowerType) => (
-          <div key={flower.strain} className='col-span-4'>
+          <div key={flower.strain} className='col-span-12 sm:col-span-6 xl:col-span-4'>
             <Flower flower={flower} />
           </div>
         ))}

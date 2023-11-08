@@ -22,7 +22,7 @@ const MenuCard = (props: MenuCardProps) => {
             alt={title}
           />
 
-          <h2 className='font-semibold text-2xl tracking-wide'>
+          <h2 className='font-semibold text-md tracking-wide md:text-2xl'>
             {title}
           </h2>
         </div>

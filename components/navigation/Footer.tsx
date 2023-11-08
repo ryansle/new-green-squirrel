@@ -25,12 +25,12 @@ const Footer = () => {
             <p className='text-gray-600 mb-3'>
               Follow us to stay up to date on product drops, free gifts, and a whole lot more!
             </p>
-            <div className='flex space-x-2'>
+            <div className='flex flex-wrap'>
               {network.map((partner) => (
                 <NextLink key={partner.text} href={partner.url}>
-                  <button className='rounded border flex py-1 px-2 border-green-500 hover:scale-102 transition duration-300 ease-in-out'>
+                  <button className='rounded border flex py-1 mr-1 mb-1 px-2 border-green-500 transition duration-300 ease-in-out hover:scale-102 md:mr-2 md:mb-0'>
                     {partner.icon}
-                    <span className='pl-2 text-white'>
+                    <span className='pl-2 text-white text-sm md:text-base'>
                       {partner.text}
                     </span>
                   </button>

@@ -29,7 +29,7 @@ const ConcentratesPage: NextPage = async () => {
 
       <div className='grid grid-cols-12 gap-4'>
         {concentrates.map((concentrate: ConcentrateType) => (
-          <div key={concentrate.name} className='col-span-4'>
+          <div key={concentrate.name} className='col-span-12 sm:col-span-6 xl:col-span-4'>
             <Concentrate concentrate={concentrate} />
           </div>
         ))}
