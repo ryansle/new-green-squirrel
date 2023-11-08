@@ -6,7 +6,6 @@ import { IoPencil as Pen } from 'react-icons/io5';
 import { Cart } from '@/components/menu/items';
 
 // Types
-import type { NextPage } from 'next';
 import type { Cartridge } from '@/lib/types';
 
 // Utilities
@@ -17,7 +16,7 @@ const routes = [
   { href: '/menu/carts', text: 'Cartridges', icon: <Pen /> }
 ];
 
-const CartsPage: NextPage = async () => {
+const CartsPage = async () => {
   const carts = await fetchCarts();
 
   return (

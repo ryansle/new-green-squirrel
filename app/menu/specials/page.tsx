@@ -6,7 +6,6 @@ import { GiMushroomGills as Shroom } from 'react-icons/gi';
 import { Specialty } from '@/components/menu/items';
 
 // Types
-import type { NextPage } from 'next';
 import type { Special } from '@/lib/types';
 
 // Utilities
@@ -17,7 +16,7 @@ const routes = [
   { href: '/menu/concentrates', text: 'Specialty Items', icon: <Shroom /> }
 ];
 
-const SpecialtyPage: NextPage = async () => {
+const SpecialtyPage = async () => {
   const specialties = await fetchSpecials();
 
   return (

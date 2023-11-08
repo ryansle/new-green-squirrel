@@ -10,12 +10,12 @@ import clsx from 'clsx';
 
 type ItemCardProps = {
   children: ReactNode;
-  bannerType?: 'sativa' | 'indica' | 'hybrid';
+  bannerType?: 'sativa' | 'indica' | 'hybrid' | 'Almost Gone' | 'new' | 'Our Pick' | '';
   altText: string;
   imageUrl: string;
   almostGone: boolean;
   isNew: boolean;
-  ourPick: boolean;
+  ourPick?: boolean;
 };
 
 const ItemCard = (props: ItemCardProps) => {
@@ -26,7 +26,7 @@ const ItemCard = (props: ItemCardProps) => {
     imageUrl,
     almostGone,
     isNew,
-    ourPick,
+    ourPick = '',
   } = props;
 
   const renderBanner = (variant: string) => {
@@ -34,6 +34,9 @@ const ItemCard = (props: ItemCardProps) => {
       variant === 'sativa' && 'bg-yellow-400 text-yellow-800',
       variant === 'indica' && 'bg-purple-300 text-purple-800',
       variant === 'hybrid' && 'bg-blue-400 text-blue-800',
+      variant === 'new' && 'text-green-900 bg-teal-300',
+      variant === 'Our Pick' && 'text-green-900 bg-green-100',
+      variant === 'Almost Gone!' && 'text-red-700 bg-red-300',
     ]);
   };
 

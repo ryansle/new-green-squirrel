@@ -6,7 +6,6 @@ import { GiTransparentSlime as Goop } from 'react-icons/gi';
 import { Concentrate } from '@/components/menu/items';
 
 // Types
-import type { NextPage } from 'next';
 import type { Concentrate as ConcentrateType } from '@/lib/types';
 
 // Utilities
@@ -17,7 +16,7 @@ const routes = [
   { href: '/menu/concentrates', text: 'Concentrates', icon: <Goop /> }
 ];
 
-const ConcentratesPage: NextPage = async () => {
+const ConcentratesPage = async () => {
   const concentrates = await fetchConcentrates();
 
   return (

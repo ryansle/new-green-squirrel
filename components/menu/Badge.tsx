@@ -21,7 +21,7 @@ const Badge = (props: BadgeProps) => {
       case 'almostGone':
         return 'Almost Gone!';
       case 'ourPick':
-        return 'Top Pick';
+        return 'Our Pick';
       default:
         return variant;
     }

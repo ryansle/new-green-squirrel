@@ -6,7 +6,6 @@ import { BsBatteryHalf as HalfBattery } from 'react-icons/bs';
 import { Battery } from '@/components/menu/items';
 
 // Types
-import type { NextPage } from 'next';
 import type { Battery as BatteryType } from '@/lib/types';
 
 // Utilities
@@ -17,7 +16,7 @@ const routes = [
   { href: '/menu/batteries', text: 'Batteries', icon: <HalfBattery /> }
 ];
 
-const BatteriesPage: NextPage = async () => {
+const BatteriesPage = async () => {
   const batteries = await fetchBatteries();
 
   return (

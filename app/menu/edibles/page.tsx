@@ -6,7 +6,6 @@ import { LiaCookieBiteSolid as Cookie } from 'react-icons/lia';
 import { Edible } from '@/components/menu/items';
 
 // Types
-import type { NextPage } from 'next';
 import type { Edible as EdibleType } from '@/lib/types';
 
 // Utilities
@@ -17,7 +16,7 @@ const routes = [
   { href: '/menu/edibles', text: 'Edibles', icon: <Cookie /> }
 ];
 
-const EdiblesPage: NextPage = async () => {
+const EdiblesPage = async () => {
   const edibles = await fetchEdibles();
 
   return (

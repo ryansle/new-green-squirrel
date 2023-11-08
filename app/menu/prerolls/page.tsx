@@ -6,7 +6,6 @@ import { LuCigarette as Joint } from 'react-icons/lu';
 import { Preroll } from '@/components/menu/items';
 
 // Types
-import type { NextPage } from 'next';
 import type { Preroll as PrerollType } from '@/lib/types';
 
 // Utilities
@@ -17,7 +16,7 @@ const routes = [
   { href: '/menu/prerolls', text: 'Prerolls', icon: <Joint /> }
 ];
 
-const PrerollsPage: NextPage = async () => {
+const PrerollsPage = async () => {
   const prerolls = await fetchPrerolls();
 
   return (

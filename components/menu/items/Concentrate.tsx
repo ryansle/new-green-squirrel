@@ -26,7 +26,7 @@ const Concentrate = (props: ConcentrateProps) => {
       imageUrl={imageUrl}
       almostGone={almostGone}
       isNew={isNew}
-      ourPick={ourPick}
+      bannerType={ourPick ? 'Our Pick' : ''}
     >
       <h2 className='font-semibold text-lg'>
         {name}
