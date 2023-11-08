@@ -1,12 +1,8 @@
 // Components
 import { Layout } from '@/components/navigation';
-import { Flower } from '@/components/menu/items';
 import { Breadcrumbs, Tabs } from '@/components/menu';
 import { GiChestnutLeaf as Leaf } from 'react-icons/gi';
 import { MdOutlineStorefront as Store } from 'react-icons/md';
-
-// Types
-import type { Flower as FlowerType } from '@/lib/types';
 
 // Utilities
 import { fetchFlowers } from '@/sanity/fetch';
@@ -20,11 +16,6 @@ const tabs = ['Everything', 'New Arrivals', 'Almost Gone', 'Top Picks', 'Sativas
 
 const FlowersPage = async () => {
   const flowers = await fetchFlowers();
-
-  const newArrivals = flowers.filter((flower: FlowerType) => flower.new);
-  const almostGone = flowers.filter((flower: FlowerType) => flower.almostGone);
-
-  const groupings = [flowers, newArrivals, almostGone];
 
   return (
     <Layout>
