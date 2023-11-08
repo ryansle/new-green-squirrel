@@ -1,12 +1,8 @@
 // Components
 import { Layout } from '@/components/navigation';
-import { Breadcrumbs } from '@/components/menu/Breadcrumbs';
 import { MdOutlineStorefront as Store } from 'react-icons/md';
 import { BsBatteryHalf as HalfBattery } from 'react-icons/bs';
-import { Battery } from '@/components/menu/items';
-
-// Types
-import type { Battery as BatteryType } from '@/lib/types';
+import { Inventory, Breadcrumbs } from '@/components/menu';
 
 // Utilities
 import { fetchBatteries } from '@/sanity/fetch';
@@ -26,13 +22,11 @@ const BatteriesPage = async () => {
         Batteries ({batteries.length})
       </h1>
 
-      <div className='grid grid-cols-12 gap-4'>
-        {batteries.map((battery: BatteryType) => (
-          <div key={battery.brand} className='col-span-12 sm:col-span-6 xl:col-span-4'>
-            <Battery battery={battery} />
-          </div>
-        ))}
-      </div>
+      <Inventory
+        inventory={batteries}
+        category='batteries'
+        fieldToSearch='brand'
+      />
     </Layout>
   );
 };

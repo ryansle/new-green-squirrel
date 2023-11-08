@@ -81,7 +81,7 @@ type Special = Product & {
   name: string;
 }
 
-type Category = 'flowers' | 'cartridges' | 'batteries' | 'edibles' | 'prerolls' | 'concentrates' | 'specialty items';
+type Category = 'flowers' | 'cartridges' | 'batteries' | 'edibles' | 'prerolls' | 'concentrates' | 'specialty items' | '';
 // #endregion
 
 export type {

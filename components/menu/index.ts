@@ -4,3 +4,4 @@ export * from './Tabs';
 export * from './Breadcrumbs';
 export * from './SearchBar';
 export * from './Inventory';
+export * from './NoResults';

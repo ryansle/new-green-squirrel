@@ -1,12 +1,8 @@
 // Components
 import { Layout } from '@/components/navigation';
-import { Breadcrumbs } from '@/components/menu/Breadcrumbs';
 import { MdOutlineStorefront as Store } from 'react-icons/md';
 import { LuCigarette as Joint } from 'react-icons/lu';
-import { Preroll } from '@/components/menu/items';
-
-// Types
-import type { Preroll as PrerollType } from '@/lib/types';
+import { Inventory, Breadcrumbs } from '@/components/menu';
 
 // Utilities
 import { fetchPrerolls } from '@/sanity/fetch';
@@ -26,13 +22,11 @@ const PrerollsPage = async () => {
         Prerolls ({prerolls.length})
       </h1>
 
-      <div className='grid grid-cols-12 gap-4'>
-        {prerolls.map((preroll: PrerollType) => (
-          <div key={preroll.name} className='col-span-12 sm:col-span-6 xl:col-span-4'>
-            <Preroll preroll={preroll} />
-          </div>
-        ))}
-      </div>
+      <Inventory
+        inventory={prerolls}
+        category='prerolls'
+        fieldToSearch='name'
+      />
     </Layout>
   );
 };

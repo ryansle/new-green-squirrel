@@ -1,12 +1,8 @@
 // Components
 import { Layout } from '@/components/navigation';
-import { Breadcrumbs } from '@/components/menu/Breadcrumbs';
 import { MdOutlineStorefront as Store } from 'react-icons/md';
 import { GiMushroomGills as Shroom } from 'react-icons/gi';
-import { Specialty } from '@/components/menu/items';
-
-// Types
-import type { Special } from '@/lib/types';
+import { Inventory, Breadcrumbs } from '@/components/menu';
 
 // Utilities
 import { fetchSpecials } from '@/sanity/fetch';
@@ -26,13 +22,11 @@ const SpecialtyPage = async () => {
         Specialty Items ({specialties.length})
       </h1>
 
-      <div className='grid grid-cols-12 gap-4'>
-        {specialties.map((special: Special) => (
-          <div key={special.name} className='col-span-12 sm:col-span-6 xl:col-span-4'>
-            <Specialty special={special} />
-          </div>
-        ))}
-      </div>
+      <Inventory
+        inventory={specialties}
+        category='specialty items'
+        fieldToSearch='name'
+      />
     </Layout>
   );
 };

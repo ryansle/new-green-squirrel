@@ -10,8 +10,8 @@ type EdibleProps = {
 
 const Edible = (props: EdibleProps) => {
   const {
-    brand,
     description,
+    name,
     imageUrl,
     price,
     new: isNew,
@@ -21,14 +21,14 @@ const Edible = (props: EdibleProps) => {
 
   return (
     <ItemCard
-      altText={brand}
+      altText={name}
       imageUrl={imageUrl}
       almostGone={almostGone}
       isNew={isNew}
       bannerType={ourPick ? 'Our Pick' : ''}
     >
       <h2 className='font-semibold text-lg'>
-        {brand}
+        {name}
       </h2>
 
       <p className='text-gray-400 text-xs mb-2'>

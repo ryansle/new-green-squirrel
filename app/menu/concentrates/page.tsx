@@ -1,12 +1,8 @@
 // Components
 import { Layout } from '@/components/navigation';
-import { Breadcrumbs } from '@/components/menu/Breadcrumbs';
 import { MdOutlineStorefront as Store } from 'react-icons/md';
 import { GiTransparentSlime as Goop } from 'react-icons/gi';
-import { Concentrate } from '@/components/menu/items';
-
-// Types
-import type { Concentrate as ConcentrateType } from '@/lib/types';
+import { Inventory, Breadcrumbs } from '@/components/menu';
 
 // Utilities
 import { fetchConcentrates } from '@/sanity/fetch';
@@ -26,13 +22,11 @@ const ConcentratesPage = async () => {
         Concentrates ({concentrates.length})
       </h1>
 
-      <div className='grid grid-cols-12 gap-4'>
-        {concentrates.map((concentrate: ConcentrateType) => (
-          <div key={concentrate.name} className='col-span-12 sm:col-span-6 xl:col-span-4'>
-            <Concentrate concentrate={concentrate} />
-          </div>
-        ))}
-      </div>
+      <Inventory
+        inventory={concentrates}
+        category='concentrates'
+        fieldToSearch='name'
+      />
     </Layout>
   );
 };

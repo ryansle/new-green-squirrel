@@ -1,13 +1,8 @@
 // Components
 import { Layout } from '@/components/navigation';
-import { Breadcrumbs } from '@/components/menu/Breadcrumbs';
 import { MdOutlineStorefront as Store } from 'react-icons/md';
 import { LiaCookieBiteSolid as Cookie } from 'react-icons/lia';
-import { Edible } from '@/components/menu/items';
-import { Inventory } from '@/components/menu';
-
-// Types
-import type { Edible as EdibleType } from '@/lib/types';
+import { Inventory, Breadcrumbs } from '@/components/menu';
 
 // Utilities
 import { fetchEdibles } from '@/sanity/fetch';
@@ -30,15 +25,8 @@ const EdiblesPage = async () => {
       <Inventory
         inventory={edibles}
         category='edibles'
+        fieldToSearch='name'
       />
-
-      {/* <div className='grid grid-cols-12 gap-4'>
-        {edibles.map((edible: EdibleType) => (
-          <div key={edible.brand} className='col-span-12 sm:col-span-6 xl:col-span-4'>
-            <Edible edible={edible} />
-          </div>
-        ))}
-      </div> */}
     </Layout>
   );
 };
