@@ -122,7 +122,7 @@ const SpecialsTabs = (props: SpecialsTabsProps) => {
 
       <div>
         <h3 className='text-2xl font-medium mb-4'>
-          {selectedTab} ({giftSubset?.length})
+          Eligible Gifts ({giftSubset?.length})
         </h3>
         <p className='mb-6 text-gray-400'>
           {renderDescription(selectedTab)}
