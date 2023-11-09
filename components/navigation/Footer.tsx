@@ -68,7 +68,7 @@ const Footer = () => {
                       <NextLink href='https://headlessui.com/' className='hover:underline'>Headless UI</NextLink>
                     </li>
                     <li className='mb-2'>
-                      <NextLink href='https://www.contentful.com/' className='hover:underline'>Contentful</NextLink>
+                      <NextLink href='https://www.sanity.io/' className='hover:underline'>Sanity.io</NextLink>
                     </li>
                   </ul>
                 </div>
