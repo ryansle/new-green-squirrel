@@ -12,13 +12,31 @@ import type { Policy, LoyaltyOffer } from '@/lib/types';
 import {
   fetchLoyaltyOffers,
   fetchGiftPolicies,
-  fetchFlowerGifts
+  fetchFlowerGifts,
+  fetchCarts,
+  fetchBatteries,
+  fetchEdibles,
+  fetchPrerolls,
+  fetchConcentrates,
+  fetchSpecials
 } from '@/sanity/fetch';
 
 const SpecialsPage: NextPage = async () => {
+  // Fetch information
   const policies = await fetchGiftPolicies();
   const offers = await fetchLoyaltyOffers();
+
+  // Fetch all items from the menu
   const flowers = await fetchFlowerGifts();
+  const carts = await fetchCarts();
+  const batteries = await fetchBatteries();
+  const edibles = await fetchEdibles();
+  const prerolls = await fetchPrerolls();
+  const dabs = await fetchConcentrates();
+  const specials = await fetchSpecials();
+
+  // Flatten into one array
+  const inventory = [flowers, carts, batteries, edibles, prerolls, dabs, specials].flat();
 
   const formattedPolicies = policies.map((policy: Policy) => policy.policy);
   const formattedOffers = offers.map((offer: LoyaltyOffer) => offer.loyaltyOffer).sort();
@@ -53,7 +71,7 @@ const SpecialsPage: NextPage = async () => {
         />
       </div>
 
-      <SpecialsTabs />
+      <SpecialsTabs inventory={inventory} />
     </Layout>
   );
 };

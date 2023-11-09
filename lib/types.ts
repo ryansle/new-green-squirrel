@@ -42,6 +42,13 @@ type Product = {
   price: string;
   imageUrl: string;
   description: string;
+  strain?: string;
+  thcContent?: string;
+  cbdContent?: string;
+  jarType?: 'clear' | 'black' | 'green';
+  type?: 'sativa' | 'indica' | 'hybrid';
+  quantity?: string;
+  brand?: string;
 }
 
 type Flower = Product & {
@@ -102,4 +109,5 @@ export type {
   Concentrate,
   Special,
   Category,
+  Product,
 };
