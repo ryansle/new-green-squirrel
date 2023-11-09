@@ -8,7 +8,7 @@ const Tabs = (props: TabsProps) => {
   const { tabs, selectedTab, onClickHandler } = props;
 
   return (
-    <div className='flex mb-4 items-center justify-center border-b border-gray-700 mb-6 text-lg'>
+    <div className='flex mb-4 items-center border-b border-gray-700 mb-6 text-lg w-full overflow-auto md:justify-center'>
       {tabs?.map((tab) => (
         <button
           key={tab}

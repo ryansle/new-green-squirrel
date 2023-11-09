@@ -57,8 +57,7 @@ const SpecialsPage: NextPage = async () => {
         {' '} for a chance to win FREE TOP SHELF OUNCES and more!
       </p>
 
-      <div className='flex space-x-8 border p-4 rounded-xl border-gray-700'>
-
+      <div className='flex border p-4 rounded-xl border-gray-700 space-y-8 flex-col md:flex-row md:space-x-8 md:space-y-0'>
         <List
           title='Loyalty Program'
           listItems={formattedOffers}
@@ -71,7 +70,7 @@ const SpecialsPage: NextPage = async () => {
         />
       </div>
 
-      <SpecialsTabs inventory={inventory} />
+      {/* <SpecialsTabs inventory={inventory} /> */}
     </Layout>
   );
 };
