@@ -5,6 +5,7 @@ import { Divider } from '@/components/global';
 
 // Types
 import type { NextPage } from 'next';
+import type { Policy } from '@/lib/types';
 
 // Utilities
 import { fetchPolicies } from '@/sanity/fetch';
@@ -12,12 +13,14 @@ import { fetchPolicies } from '@/sanity/fetch';
 const HomePage: NextPage = async () => {
   const policies = await fetchPolicies();
 
+  const formattedPolicies = policies.map((policy: Policy) => policy.policy);
+
   return (
     <Layout>
       <Hero />
       <Gallery />
       <Divider />
-      <Policies policies={policies} />
+      <Policies policies={formattedPolicies} />
     </Layout>
   );
 };

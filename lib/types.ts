@@ -17,6 +17,10 @@ type Policy = {
   policy: string;
 }
 
+type LoyaltyOffer = {
+  loyaltyOffer: string;
+}
+
 type FAQ = {
   question: string;
   answer: string;
@@ -88,6 +92,7 @@ export type {
   Route,
   SocialMedia,
   Policy,
+  LoyaltyOffer,
   FAQ,
   Flower,
   Cartridge,

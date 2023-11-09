@@ -3,8 +3,8 @@
 import { useState } from 'react';
 
 // Components
-import { Flower } from './items';
-import { Inventory } from './Inventory';
+import { Inventory } from '@/components/menu/Inventory';
+import { Tabs } from '@/components/Tabs';
 
 // Types
 import type { Flower as FlowerType } from '@/lib/types';
@@ -15,7 +15,7 @@ type TabsProps = {
 };
 
 // TODO: suspense component to load this after successful data load?
-const Tabs = (props: TabsProps) => {
+const FlowerTabs = (props: TabsProps) => {
   const { tabs, flowers } = props;
 
   const [selected, setSelected] = useState<FlowerType[]>(flowers);
@@ -76,17 +76,11 @@ const Tabs = (props: TabsProps) => {
 
   return (
     <div>
-      <div className='flex mb-4 items-center justify-center border-b border-gray-700 mb-6 text-lg'>
-        {tabs?.map((tab) => (
-          <button
-            key={tab}
-            onClick={() => handleSelection(tab)}
-            className={`${selectedTab === tab ? 'font-semibold rounded-t-xl bg-green-400 text-green-800' : ''} px-4 py-2`}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
+      <Tabs
+        tabs={tabs}
+        selectedTab={selectedTab}
+        onClickHandler={handleSelection}
+      />
       <div>
         <h3 className='text-2xl font-medium mb-4'>
           {selectedTab} ({selected.length})
@@ -105,4 +99,4 @@ const Tabs = (props: TabsProps) => {
   );
 };
 
-export { Tabs };
+export { FlowerTabs };

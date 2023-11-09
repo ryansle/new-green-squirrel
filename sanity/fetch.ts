@@ -217,7 +217,7 @@ const fetchOffers = async () => {
 };
 
 const fetchFlowerGifts = async () => {
-  const data = await client.fetch(`*[_type == 'flowergifts && visible] {
+  const data = await client.fetch(`*[_type == 'flowergifts' && visible] {
     strain,
     type,
     thcContent,
