@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 // Components
 import { Flower } from './items';
+import { Inventory } from './Inventory';
 
 // Types
 import type { Flower as FlowerType } from '@/lib/types';
@@ -94,13 +95,11 @@ const Tabs = (props: TabsProps) => {
           {renderDescription(selectedTab)}
         </p>
 
-        <div className='grid grid-cols-12 gap-4'>
-          {selected?.map((flower: FlowerType) => (
-            <div key={flower.strain} className='col-span-12 sm:col-span-6 xl:col-span-4'>
-              <Flower flower={flower} />
-            </div>
-          ))}
-        </div>
+        <Inventory
+          inventory={selected}
+          category='flowers'
+          fieldToSearch='strain'
+        />
       </div>
     </div>
   );
