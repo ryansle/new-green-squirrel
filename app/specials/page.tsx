@@ -70,7 +70,7 @@ const SpecialsPage: NextPage = async () => {
         />
       </div>
 
-      {/* <SpecialsTabs inventory={inventory} /> */}
+      <SpecialsTabs inventory={inventory} />
     </Layout>
   );
 };
