@@ -22,7 +22,7 @@ const tabs = [
   'Spend $420',
   'Spend $500',
   'Spend $600',
-  'Spend $270',
+  'Spend $700',
   'Spend $800',
   'Spend $900',
   'Spend $1000',

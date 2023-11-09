@@ -49,6 +49,7 @@ type Product = {
   type?: 'sativa' | 'indica' | 'hybrid';
   quantity?: string;
   brand?: string;
+  name?: string;
 }
 
 type Flower = Product & {
