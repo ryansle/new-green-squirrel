@@ -12,14 +12,18 @@ const Gift = (props: GiftProps) => {
   const {
     almostGone,
     new: isNew,
-    ourPick,
+    smallGiftEligible,
+    squirrelReserveEligible,
+    standardGiftEligible,
+    mediumGiftEligible,
+    premiumGiftEligible,
+    price,
     imageUrl,
     description,
     // These fields may not exist
     strain,
     brand,
     name,
-    price,
   } = props.product;
 
   return (
@@ -28,13 +32,23 @@ const Gift = (props: GiftProps) => {
       imageUrl={imageUrl}
       almostGone={almostGone}
       isNew={isNew}
-      bannerType={ourPick ? 'Our Pick' : ''}
+      bannerType={
+        smallGiftEligible ? 'Small' : (
+          mediumGiftEligible ? 'Medium' : (
+            standardGiftEligible ? 'Standard' : (
+              premiumGiftEligible ? 'Premium' : (
+                squirrelReserveEligible ? 'Reserve' : ''
+              )
+            )
+          )
+        )
+      }
     >
       <h2 className='font-semibold text-lg'>
         {strain ?? name ?? brand}
       </h2>
 
-      <p className='text-gray-400 text-sm mb-2'>
+      <p className='text-gray-400 text-xs mb-2'>
         {description}
       </p>
 

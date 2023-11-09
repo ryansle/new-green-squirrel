@@ -1,6 +1,6 @@
 // Components
 import { Layout } from '@/components/navigation';
-import { SpecialsTabs } from '@/components/specials';
+import { SpecialsTabs, Gift } from '@/components/specials';
 import NextLink from 'next/link';
 import { List } from '@/components';
 
