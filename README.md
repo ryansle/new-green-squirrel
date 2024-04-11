@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GreenSquirrelNYC.com
 
-## Getting Started
+Home of the Green Squirrel Collective - a delivery service based in Brooklyn, NY.
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Why does this exist?
+Prior to this website being built, the GSC (Green Squirrel Collective) was using a photo of a menu on their Tumblr site in order to run their inventory system. As expected, this solution was difficult to maintain and very rarely kept up-to-date. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I approached the group in late 2022 to propose a new solution: a custom-built website that utilizes a content management system in order to make it quick and easy to maintain their rotating menu. This is the second iteration of that website. The original version can be viewed [here.](https://green-squirrel.vercel.app/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* View GSC's up-to-date rotating inventory
+* View local specials and filter content to see exactly what gifts you may be eligible for
+* Read their frequently asked questions regarding their delivery service
+* Check out the rest of the Green Squirrel network
+* Search, sort, and filter for specific items in their inventory
 
-## Learn More
+## Built With
 
-To learn more about Next.js, take a look at the following resources:
+* React.js
+* Tailwind CSS
+* Next.js
+* Headless UI
+* TypeScript
+* Vercel
+* Sanity.io
+* React-Query
+* React Icons
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Credits
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* [Ryan Le](https://ryanle.dev/) - design & development of the website 
