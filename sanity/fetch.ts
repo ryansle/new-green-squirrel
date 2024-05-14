@@ -1,6 +1,8 @@
 // Utilities
 import { client } from '@/sanity/lib/client';
 
+const revalidate = 60;
+
 // #region Inventory Fetch Requests
 const fetchFlowers = async () => {
   const data = await client.fetch(`*[_type == 'flowers' && visible] {
@@ -23,7 +25,7 @@ const fetchFlowers = async () => {
     referralGiftEligible,
     squirrelReserveEligible,
     visible,
-  }`);
+  }`, { next: { revalidate } });
 
   return data;
 };
@@ -44,7 +46,7 @@ const fetchBatteries = async () => {
     referralGiftEligible,
     squirrelReserveEligible,
     visible,
-  }`);
+  }`, { next: { revalidate } });
 
   return data;
 };
@@ -68,7 +70,7 @@ const fetchCarts = async () => {
     referralGiftEligible,
     squirrelReserveEligible,
     visible,
-  }`);
+  }`, { next: { revalidate } });
 
   return data;
 };
@@ -90,7 +92,7 @@ const fetchConcentrates = async () => {
     referralGiftEligible,
     squirrelReserveEligible,
     visible,
-  }`);
+  }`, { next: { revalidate } });
 
   return data;
 };
@@ -113,7 +115,7 @@ const fetchEdibles = async () => {
     referralGiftEligible,
     squirrelReserveEligible,
     visible,
-  }`);
+  }`, { next: { revalidate } });
 
   return data;
 };
@@ -134,7 +136,7 @@ const fetchPrerolls = async () => {
     referralGiftEligible,
     squirrelReserveEligible,
     visible,
-  }`);
+  }`, { next: { revalidate } });
 
   return data;
 };
@@ -156,7 +158,7 @@ const fetchSpecials = async () => {
     referralGiftEligible,
     squirrelReserveEligible,
     visible,
-  }`);
+  }`, { next: { revalidate } });
 
   return data;
 };
@@ -167,7 +169,7 @@ const fetchSocials = async () => {
   const data = client.fetch(`*[_type == 'socialMediaPlatforms'] {
     platform,
     link,
-  }`);
+  }`, { next: { revalidate } });
 
   return data;
 };
@@ -176,7 +178,7 @@ const fetchFAQ = async () => {
   const data = await client.fetch(`*[_type == 'faq'] {
     question, 
     answer
-  }`);
+  }`, { next: { revalidate } });
 
   return data;
 };
@@ -184,7 +186,7 @@ const fetchFAQ = async () => {
 const fetchPolicies = async () => {
   const data = await client.fetch(`*[_type == 'policy'] {
     policy
-  }`);
+  }`, { next: { revalidate } });
 
   return data;
 };
@@ -194,7 +196,7 @@ const fetchPolicies = async () => {
 const fetchLoyaltyOffers = async () => {
   const data = await client.fetch(`*[_type == 'loyaltyProgram'] {
     loyaltyOffer,
-  }`);
+  }`, { next: { revalidate } });
 
   return data;
 };
@@ -202,7 +204,7 @@ const fetchLoyaltyOffers = async () => {
 const fetchGiftPolicies = async () => {
   const data = await client.fetch(`*[_type == 'giftPolicies'] {
     policy
-  }`);
+  }`, { next: { revalidate } });
 
   return data;
 };
@@ -211,7 +213,7 @@ const fetchOffers = async () => {
   const data = await client.fetch(`*[_type == 'spendingRewards'] {
     minimumSpend,
     offer
-  }`);
+  }`, { next: { revalidate } });
 
   return data;
 };
@@ -237,7 +239,7 @@ const fetchFlowerGifts = async () => {
     referralGiftEligible,
     squirrelReserveEligible,
     visible,
-  }`);
+  }`, { next: { revalidate } });
 
   return data;
 };
