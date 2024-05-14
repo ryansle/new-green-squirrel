@@ -26,3 +26,5 @@ const HomePage: NextPage = async () => {
 };
 
 export default HomePage;
+
+export const revalidate = 30;

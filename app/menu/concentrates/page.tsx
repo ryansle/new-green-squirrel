@@ -32,3 +32,5 @@ const ConcentratesPage = async () => {
 };
 
 export default ConcentratesPage;
+
+export const revalidate = 30;

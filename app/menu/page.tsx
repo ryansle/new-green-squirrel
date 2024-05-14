@@ -70,3 +70,5 @@ const MenuPage: NextPage = () => {
 };
 
 export default MenuPage;
+
+export const revalidate = 30;

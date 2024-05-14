@@ -32,3 +32,5 @@ const BatteriesPage = async () => {
 };
 
 export default BatteriesPage;
+
+export const revalidate = 30;

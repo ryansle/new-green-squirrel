@@ -16,3 +16,5 @@ const FAQPage = async () => {
 };
 
 export default FAQPage;
+
+export const revalidate = 30;

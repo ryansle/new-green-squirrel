@@ -32,3 +32,5 @@ const EdiblesPage = async () => {
 };
 
 export default EdiblesPage;
+
+export const revalidate = 30;

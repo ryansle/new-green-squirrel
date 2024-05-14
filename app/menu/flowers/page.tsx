@@ -34,3 +34,5 @@ const FlowersPage = async () => {
 };
 
 export default FlowersPage;
+
+export const revalidate = 30;

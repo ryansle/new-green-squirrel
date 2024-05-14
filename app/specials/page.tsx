@@ -76,3 +76,5 @@ const SpecialsPage: NextPage = async () => {
 };
 
 export default SpecialsPage;
+
+export const revalidate = 30;

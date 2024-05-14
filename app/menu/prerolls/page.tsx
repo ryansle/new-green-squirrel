@@ -32,3 +32,5 @@ const PrerollsPage = async () => {
 };
 
 export default PrerollsPage;
+
+export const revalidate = 30;
