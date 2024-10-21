@@ -27,13 +27,15 @@ const Footer = () => {
             </p>
             <div className='flex flex-wrap'>
               {network.map((partner) => (
-                <NextLink key={partner.text} href={partner.url}>
-                  <button className='rounded border flex py-1 mr-1 mb-1 px-2 border-green-500 transition duration-300 ease-in-out hover:scale-102 md:mr-2 md:mb-0'>
-                    {partner.icon}
-                    <span className='pl-2 text-white text-sm md:text-base'>
-                      {partner.text}
-                    </span>
-                  </button>
+                <NextLink
+                  key={partner.text}
+                  href={partner.url}
+                  className='rounded border flex py-1 mr-1 mb-1 px-2 border-green-500 transition duration-300 ease-in-out hover:scale-102 md:mr-2 md:mb-0'
+                >
+                  {partner.icon}
+                  <span className='pl-2 text-white text-sm md:text-base'>
+                    {partner.text}
+                  </span>
                 </NextLink>
               ))}
             </div>

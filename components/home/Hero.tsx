@@ -9,7 +9,7 @@ const Hero = () => {
         src='/squirrel.png'
         width={50}
         height={50}
-        alt='Green Squirrel Collective'
+        alt='Green Squirrel Collective Logo'
         className='mb-4'
       />
       <div className='text-center font-semibold tracking-wide md:space-y-3'>
